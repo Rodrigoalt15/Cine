@@ -1,0 +1,46 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "movieTitle": "Titanic",
+      "imgUrl": "https://m.media-amazon.com/images/I/91WlTjCgu4L._AC_SL1500_.jpg",
+      "duration": "3h: 14m",
+      "genre": "romance"
+    },
+    {
+      "id": 2,
+      "movieTitle": "The Whale",
+      "imgUrl": "https://image.tmdb.org/t/p/original/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg",
+      "duration": "1h: 57m",
+      "genre": "Drama"
+    },
+    {
+      "id": 3,
+      "movieTitle": "Titanic",
+      "imgUrl": "https://m.media-amazon.com/images/I/91WlTjCgu4L._AC_SL1500_.jpg",
+      "duration": "3h: 14m",
+      "genre": "romance"
+    },
+    {
+      "id": 4,
+      "movieTitle": "The Menu",
+      "imgUrl": "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/09/menu-art-1.jpg?ssl=1",
+      "duration": "1h: 47m",
+      "genre": "Comedia negra"
+    },
+    {
+      "id": 5,
+      "movieTitle": "Dungeons & Dragons: Honor AMONG THIEVES",
+      "imgUrl": "https://sportshub.cbsistatic.com/i/2022/12/05/33f6d331-cb1c-4231-8561-e01a1960bb20/dnd-poster.jpg?auto=webp&width=1080&height=1350&crop=0.8:1,smart",
+      "duration": "2h: 14m",
+      "genre": "Acción"
+    },
+    {
+      "id": 6,
+      "movieTitle": "The Whale",
+      "imgUrl": "https://image.tmdb.org/t/p/original/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg",
+      "duration": "1h: 57m",
+      "genre": "Drama"
+    }
+  ]
+}

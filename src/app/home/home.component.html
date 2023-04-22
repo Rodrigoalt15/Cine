@@ -1,0 +1,6 @@
+<section class="recent-movies">
+    <h2>Peliculas Recientes</h2>
+    <div class="card-container">
+        <app-movie-card *ngFor="let movie of movies" [movie]="movie" [showButtons]="true"></app-movie-card>
+    </div>
+</section>

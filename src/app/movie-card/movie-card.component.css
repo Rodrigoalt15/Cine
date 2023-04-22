@@ -1,0 +1,42 @@
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Añade position: relative para que funcione como contenedor para el título absoluto */
+}
+
+.card-content {
+  position: relative;
+}
+
+.movie-poster {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 100%;
+}
+
+mat-card-header {
+  position: absolute;
+  bottom: 6rem;
+  left: 0;
+  max-width: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 300px; /* Asegurar que el título ocupe todo el ancho disponible */
+  color: white; /* Cambia el color del texto a blanco para mejor contraste */
+  padding: 0px; /* Añade un poco de espacio alrededor del título */
+}
+
+mat-card-subtitle {
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Centra verticalmente el ID y el título */
+  gap: 8px; /* Espacio entre el ID y el título */
+}
+
+.header-id {
+  margin: 0; /* Elimina el margen predeterminado para el subtítulo */
+}

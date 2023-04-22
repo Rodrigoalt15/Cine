@@ -1,0 +1,22 @@
+* {
+  background-color: #1e1e1e;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  padding: 30px 0 30px 0;
+}
+
+app-movie-card {
+  flex: 1; /* Hacer que las tarjetas ocupen todo el espacio disponible */
+  max-width: 300px; /* Establecer un ancho máximo para las tarjetas */
+}
+
+.recent-movies h2 {
+  color: white;
+  text-align: center;
+}
