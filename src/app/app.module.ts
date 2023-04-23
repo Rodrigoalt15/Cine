@@ -17,13 +17,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
 
+import { MoviesComponent } from './movies/movies.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AddMovieDialogComponent } from './add-movie-dialog/add-movie-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     HomeComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    MoviesComponent,
+    AddMovieDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -34,7 +43,10 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

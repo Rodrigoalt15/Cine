@@ -1,11 +1,12 @@
 .toolbar {
-  background-color: #745674;
+  background-color: #323233;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
   margin: 0;
+  color: #fff;
 }
 
 .toolbar-right {

@@ -19,17 +19,18 @@ app-movie-card {
 .recent-movies h2 {
   color: white;
   text-align: center;
-  padding-top: 10px;
 }
 
-/*banner*/
-.banner {
-  background-image: url("https://www.cinemark.com/media/76005636/01_smb_web_cinemark_1080x360_sl_f01_022823.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 360px;
+button {
+  color: #fff;
+  background-color: green;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 16px 16px;
 }

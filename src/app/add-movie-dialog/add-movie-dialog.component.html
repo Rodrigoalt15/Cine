@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Agregar película</h2>
+<div mat-dialog-content>
+    <form (ngSubmit)="onSubmit()" #movieForm="ngForm">
+        <mat-form-field>
+            <mat-label>Titulo</mat-label>
+            <input matInput [(ngModel)]="movie.movieTitle" name="movieTitle" required />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Imagen URL</mat-label>
+            <input matInput [(ngModel)]="movie.imgUrl" name="imgUrl" required />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Duración</mat-label>
+            <input matInput [(ngModel)]="movie.duration" name="duration" required />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Genero</mat-label>
+            <input matInput [(ngModel)]="movie.genre" name="genre" required />
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancelar</button>
+    <button mat-button (click)="onSubmit()" [disabled]="!movieForm.valid">Agregar</button>
+</div>

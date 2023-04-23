@@ -1,0 +1,15 @@
+<section class="recent-movies">
+    <div class="header">
+        <h2>{{ editMode ? 'Peliculas Modo Edición' : 'Peliculas' }}</h2>
+        <div>
+            <button mat-raised-button color="primary" (click)="addNewMovie()">New +</button>
+            <button mat-raised-button color="primary" (click)="toggleEditMode()">
+                {{ editMode ? 'Salir del modo edición' : 'Editar' }}
+            </button>
+        </div>
+    </div>
+    <div class="card-container">
+        <app-movie-card *ngFor="let movie of movies; index as i" [movie]="movie" [showButtons]="editMode ? true : false"
+            [cardStyle]="editMode ? 'alternative' : ''" (onDelete)="deleteMovie(i)"></app-movie-card>
+    </div>
+</section>

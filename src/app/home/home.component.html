@@ -1,6 +1,10 @@
+<a href="business/peliculas">
+    <section class="banner">
+    </section>
+</a>
 <section class="recent-movies">
     <h2>Peliculas Recientes</h2>
     <div class="card-container">
-        <app-movie-card *ngFor="let movie of movies" [movie]="movie" [showButtons]="true"></app-movie-card>
+        <app-movie-card *ngFor="let movie of movies" [movie]="movie" [showButtons]="false"></app-movie-card>
     </div>
 </section>

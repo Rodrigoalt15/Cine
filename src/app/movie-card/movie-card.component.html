@@ -1,41 +1,65 @@
-<mat-card class="card">
+<mat-card class="card" [ngClass]="{'card-alternative': cardStyle === 'alternative'}">
     <ng-container *ngIf="!isEditMode">
         <mat-card-header>
             <div class="header-content">
-                <mat-card-subtitle class="header-id">{{ movie.id }}</mat-card-subtitle>
-                <mat-card-title>{{ movie.movieTitle }}</mat-card-title>
+                <div class="id-title-container">
+                    <mat-card-subtitle class="header-id">
+                        {{ movie.id }}
+                    </mat-card-subtitle>
+                    <mat-card-title>
+                        <div class="title-text">{{ movie.movieTitle }}</div>
+                        <button *ngIf="showButtons" mat-icon-button (click)="enableEditMode('title')"
+                            class="edit-button" style="float: right;">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </mat-card-title>
+                </div>
             </div>
         </mat-card-header>
 
-        <mat-card-image [ngStyle]="{'background-image': 'url(' + movie.imgUrl + ')'}"
-            class="movie-poster"></mat-card-image>
+        <mat-card-image [ngStyle]="{'background-image': 'url(' + movie.imgUrl + ')'}" class="movie-poster">
+            <button *ngIf="showButtons" mat-icon-button class="edit-button" (click)="enableEditMode('imgUrl')">
+                <mat-icon>edit</mat-icon>
+            </button>
+        </mat-card-image>
         <mat-card-content #cardContent>
-            <p>duración: {{ movie.duration }}</p>
-            <p>genero: {{ movie.genre }}</p>
+            <p>duración: {{ movie.duration }}
+                <button *ngIf="showButtons" mat-icon-button (click)="enableEditMode('duration')">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </p>
+            <p>genero: {{ movie.genre }}
+                <button *ngIf="showButtons" mat-icon-button (click)="enableEditMode('genre')">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </p>
         </mat-card-content>
 
         <mat-card-actions *ngIf="showButtons" #cardActions>
-            <button mat-button (click)="enableEditMode()">edit</button>
-            <button mat-button>delete</button>
+            <button mat-button (click)="deleteMovie()"><mat-icon>delete</mat-icon></button>
         </mat-card-actions>
     </ng-container>
 
     <ng-container *ngIf="isEditMode">
         <!-- Contenido del formulario -->
         <form (ngSubmit)="onSubmit()" #movieForm="ngForm">
-            <mat-form-field>
+            <mat-form-field *ngIf="editField === 'id'">
+                <mat-label>ID</mat-label>
+                <input matInput [(ngModel)]="movie.id" name="id" required />
+            </mat-form-field>
+            <mat-form-field *ngIf="editField === 'title'">
                 <mat-label>Titulo</mat-label>
                 <input matInput [(ngModel)]="movie.movieTitle" name="movieTitle" required />
             </mat-form-field>
-            <mat-form-field>
-                <mat-label>Imagen URL</mat-label>
+            <mat-form-field *ngIf="editField === 'imgUrl'">
+                <mat-label>Imagen</mat-label>
                 <input matInput [(ngModel)]="movie.imgUrl" name="imgUrl" required />
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field *ngIf="editField === 'duration'">
                 <mat-label>Duración</mat-label>
                 <input matInput [(ngModel)]="movie.duration" name="duration" required />
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field *ngIf="editField === 'genre'">
                 <mat-label>Genero</mat-label>
                 <input matInput [(ngModel)]="movie.genre" name="genre" required />
             </mat-form-field>
