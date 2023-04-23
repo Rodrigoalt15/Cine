@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { HomeComponent } from './home/home.component';
-import { MovieCardComponent } from './movie-card/movie-card.component';
+import { HomeComponent } from './components/home/home.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,9 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
 
-import { MoviesComponent } from './movies/movies.component';
+import { MoviesComponent } from './components/movies/movies.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AddMovieDialogComponent } from './add-movie-dialog/add-movie-dialog.component';
+import { AddMovieDialogComponent } from './components/add-movie-dialog/add-movie-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 

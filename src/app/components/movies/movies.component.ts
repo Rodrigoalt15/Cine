@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Movie } from '../models/movie.model';
-import { HttpDataService } from '../services/http-data.service';
+import { Movie } from '../../models/movie.model';
+import { HttpDataService } from '../../services/http-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { AddMovieDialogComponent } from '../add-movie-dialog/add-movie-dialog.component';

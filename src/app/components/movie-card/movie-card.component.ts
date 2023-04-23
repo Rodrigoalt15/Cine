@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges } from '@angular/core';
 
-import { Movie } from '../models/movie.model';
-import { HttpDataService } from '../services/http-data.service';
+import { Movie } from '../../models/movie.model';
+import { HttpDataService } from '../../services/http-data.service';
 
 
 @Component({
