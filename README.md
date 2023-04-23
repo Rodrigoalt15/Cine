@@ -1,3 +1,10 @@
+# Author
+Rodrigo Andrés López Takahashi
+
+#About the project
+
+Homework for the Open Source Application Development course at UPC (Universidad Peruana de Ciencias Aplicadas).
+
 # Cine
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
