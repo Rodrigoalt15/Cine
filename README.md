@@ -1,7 +1,7 @@
 # Author
 Rodrigo Andrés López Takahashi
 
-#About the project
+# About the project
 
 Homework for the Open Source Application Development course at UPC (Universidad Peruana de Ciencias Aplicadas).
 
