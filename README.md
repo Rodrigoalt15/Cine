@@ -1,4 +1,4 @@
-# Author
+# Authors
 Rodrigo Andrés López Takahashi - 
 Wilver Arana Ramos
 
