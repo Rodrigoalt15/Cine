@@ -2,6 +2,9 @@
 Rodrigo Andrés López Takahashi - 
 Wilver Arana Ramos
 
+# To run the db
+json-server --watch src/assets/data.json
+
 # About the project
 
 Homework for the Open Source Application Development course at UPC (Universidad Peruana de Ciencias Aplicadas).
