@@ -1,5 +1,6 @@
 # Author
 Rodrigo Andrés López Takahashi
+Wilver Arana Ramos
 
 # About the project
 
