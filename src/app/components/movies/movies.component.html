@@ -1,6 +1,10 @@
-<section class="recent-movies">
+<section class="movies">
     <div class="header">
         <h2>{{ editMode ? 'Peliculas Modo Edición' : 'Peliculas' }}</h2>
+        <mat-form-field color="accent">
+            <mat-label>Buscar</mat-label>
+            <input [(ngModel)]="searchText" matInput />
+        </mat-form-field>
         <div>
             <button mat-raised-button color="primary" (click)="addNewMovie()">New +</button>
             <button mat-raised-button color="primary" (click)="toggleEditMode()">
@@ -9,7 +13,12 @@
         </div>
     </div>
     <div class="card-container">
-        <app-movie-card *ngFor="let movie of movies; index as i" [movie]="movie" [showButtons]="editMode ? true : false"
-            [cardStyle]="editMode ? 'alternative' : ''" (onDelete)="deleteMovie(i)"></app-movie-card>
+        <app-movie-card *ngFor="let movie of getFilteredMovies(); index as i" [movie]="movie"
+            [showButtons]="editMode ? true : false" [cardStyle]="editMode ? 'alternative' : ''"
+            (onDelete)="deleteMovie(i)"></app-movie-card>
     </div>
+
 </section>
+<mat-paginator [length]="getPaginatorLength()" [pageSize]="pageSize" [pageSizeOptions]="[12, 24, 48]"
+    (page)="pageChanged($event)">
+</mat-paginator>

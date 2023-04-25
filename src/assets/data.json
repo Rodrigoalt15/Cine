@@ -30,22 +30,22 @@
     },
     {
       "id": 8,
-      "movieTitle": "El Señor de los Anillos: la Comunidad del Anillo",
-      "imgUrl": "https://lavozenoffdotnet.files.wordpress.com/2012/12/el_senor_de_los_anillos_la_comunidad_del_anillo-caratula.jpg?w=470&h=675",
+      "movieTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_%282001%29.jpg",
       "duration": "2h 58m",
       "genre": "Aventuras Fantasía épica"
     },
     {
       "id": 9,
-      "movieTitle": "El Señor de los Anillos: las dos torres",
-      "imgUrl": "https://pics.filmaffinity.com/El_se_or_de_los_anillos_Las_dos_torres-450612576-large.jpg",
+      "movieTitle": "The Lord Of the Rings: The Two Towers",
+      "imgUrl": "https://m.media-amazon.com/images/I/61PhNkCm8gL._AC_SL1068_.jpg",
       "duration": "2h 59m",
       "genre": "Aventuras Fantasía épica"
     },
     {
       "id": 10,
-      "movieTitle": "El Señor de los Anillos: el retorno del Rey",
-      "imgUrl": "https://pics.filmaffinity.com/the_lord_of_the_rings_the_return_of_the_king-178294596-large.jpg",
+      "movieTitle": "The Lord Of the Rings: The Return of The King",
+      "imgUrl": "https://m.media-amazon.com/images/I/518MBFguRsL._AC_.jpg",
       "duration": "3h 30m",
       "genre": "Aventuras Fantasía épica"
     },
@@ -78,13 +78,6 @@
       "genre": "Ciencia ficción"
     },
     {
-      "id": 18,
-      "movieTitle": "Joker",
-      "imgUrl": "https://assets1.ignimgs.com/2019/08/28/joker-poster-1567009838218.jpg?width=300",
-      "duration": "2h 2m",
-      "genre": "Suspenso"
-    },
-    {
       "id": 19,
       "movieTitle": "Fight Club",
       "imgUrl": "https://i.ebayimg.com/images/g/9pcAAOSw3Zxg5ss-/s-l500.jpg",
@@ -101,7 +94,7 @@
     {
       "id": 21,
       "movieTitle": "Arrival",
-      "imgUrl": "https://pics.filmaffinity.com/arrival-150207636-large.jpg",
+      "imgUrl": "https://m.media-amazon.com/images/I/71l6fadsRMS._AC_SL1406_.jpg",
       "duration": "1h 56m",
       "genre": "Ciencia ficción"
     },
@@ -177,7 +170,7 @@
     },
     {
       "id": 33,
-      "movieTitle": "El origen",
+      "movieTitle": "Inception",
       "imgUrl": "https://play-lh.googleusercontent.com/TGaTckK5V7VKlJ34PFlON5ei_DARWndAHrDqOWTaC6kH5R8V8RlxE6i22VswAx3ENx-3=w240-h480-rw",
       "duration": "2h 28m",
       "genre": "Acción"

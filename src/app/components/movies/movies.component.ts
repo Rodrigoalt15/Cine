@@ -4,6 +4,7 @@ import { HttpDataService } from '../../services/http-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
 import { AddMovieDialogComponent } from '../add-movie-dialog/add-movie-dialog.component';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-movies',
@@ -13,6 +14,10 @@ import { AddMovieDialogComponent } from '../add-movie-dialog/add-movie-dialog.co
 export class MoviesComponent {
   movies: Movie[] = [];
   editMode = false;
+  searchText = '';
+  pageSize = 12;
+  pageIndex = 0;
+  filteredMovies: Movie[] = [];
 
   constructor(private httpDataService: HttpDataService, private snackBar: MatSnackBar, public dialog: MatDialog) { }
 
@@ -55,5 +60,22 @@ export class MoviesComponent {
         );
       }
     });
+  }
+
+  getFilteredMovies(): Movie[] {
+    if (!this.searchText) {
+      return this.movies.slice(this.pageIndex * this.pageSize, (this.pageIndex + 1) * this.pageSize);
+    }
+    this.filteredMovies = this.movies.filter((movie) => movie.movieTitle.toLowerCase().includes(this.searchText.toLowerCase()));
+    return this.filteredMovies.slice(this.pageIndex * this.pageSize, (this.pageIndex + 1) * this.pageSize);
+  }
+
+  pageChanged(event: PageEvent) {
+    this.pageIndex = event.pageIndex;
+    this.pageSize = event.pageSize;
+  }
+
+  getPaginatorLength(): number {
+    return this.searchText ? this.filteredMovies.length : this.movies.length;
   }
 }

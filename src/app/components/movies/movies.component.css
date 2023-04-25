@@ -16,9 +16,15 @@ app-movie-card {
   max-width: 300px; /* Establecer un ancho máximo para las tarjetas */
 }
 
-.recent-movies h2 {
+.movies h2 {
   color: white;
   text-align: center;
+}
+
+.movies {
+  min-height: calc(100% - 64px);
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -33,4 +39,13 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 16px 16px;
+}
+
+mat-paginator {
+  color: #fff;
+  background-color: #323233;
+}
+
+mat-label {
+  background-color: transparent;
 }
