@@ -3,7 +3,7 @@ Rodrigo Andrés López Takahashi -
 Wilver Arana Ramos
 
 # To run the db
-json-server --watch src/assets/data.json
+`json-server --watch src/assets/data.json`
 
 # About the project
 
