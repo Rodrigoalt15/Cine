@@ -7,7 +7,7 @@ import { Movie } from '../models/movie.model';
   providedIn: 'root'
 })
 export class HttpDataService {
-  base_Url = "http://localhost:3000/movie";
+  base_Url = "http://localhost:3000/movies";
 
   constructor(private http: HttpClient) { }
 

@@ -1,0 +1,31 @@
+<div class="container-form">
+    <h1 mat-dialog-title *ngIf="data.mode === 'edit'">Editar Película</h1>
+    <h1 mat-dialog-title *ngIf="data.mode === 'add'">Agregar Película</h1>
+    <div mat-dialog-content>
+        <form [formGroup]="form">
+            <mat-form-field>
+                <mat-label>Titulo</mat-label>
+                <input formControlName="title" matInput />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>URL Imagen</mat-label>
+                <input formControlName="imgUrl" matInput />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Duración</mat-label>
+                <input formControlName="duration" matInput />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Genero</mat-label>
+                <input formControlName="genre" matInput />
+            </mat-form-field>
+        </form>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button [disabled]="!form.valid" (click)="onSubmit(form.value)"
+            *ngIf="data.mode === 'edit'">Guardar</button>
+        <button mat-button [disabled]="!form.valid" (click)="onSubmit(form.value)"
+            *ngIf="data.mode === 'add'">Agregar</button>
+        <button mat-button (click)="onCancel()">Cancelar</button>
+    </div>
+</div>

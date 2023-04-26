@@ -1,190 +1,190 @@
 {
-  "movie": [
+  "movies": [
     {
       "id": 2,
-      "movieTitle": "The Whale",
+      "title": "The Whale",
       "imgUrl": "https://image.tmdb.org/t/p/original/jQ0gylJMxWSL490sy0RrPj1Lj7e.jpg",
       "duration": "1h: 57m",
       "genre": "Drama"
     },
     {
       "id": 4,
-      "movieTitle": "The Menu",
+      "title": "The Menu",
       "imgUrl": "https://i0.wp.com/bloody-disgusting.com/wp-content/uploads/2022/09/menu-art-1.jpg?ssl=1",
       "duration": "1h: 47m",
       "genre": "Terror"
     },
     {
       "id": 6,
-      "movieTitle": "Tetris",
+      "title": "Tetris",
       "imgUrl": "https://assets-prd.ignimgs.com/2023/03/02/tetrisupdate-1677738857094.png",
       "duration": "1h 58m",
       "genre": "Cine biográfico"
     },
     {
       "id": 7,
-      "movieTitle": "Pinball: The Man Who Saved the Game",
+      "title": "Pinball: The Man Who Saved the Game",
       "imgUrl": "https://i.ebayimg.com/images/g/ZREAAOSwuQpkBdnU/s-l500.jpg",
       "duration": "1h 31m",
       "genre": "Cine biográfico"
     },
     {
       "id": 8,
-      "movieTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings_The_Fellowship_of_the_Ring_%282001%29.jpg",
       "duration": "2h 58m",
       "genre": "Aventuras Fantasía épica"
     },
     {
       "id": 9,
-      "movieTitle": "The Lord Of the Rings: The Two Towers",
+      "title": "The Lord Of the Rings: The Two Towers",
       "imgUrl": "https://m.media-amazon.com/images/I/61PhNkCm8gL._AC_SL1068_.jpg",
       "duration": "2h 59m",
       "genre": "Aventuras Fantasía épica"
     },
     {
       "id": 10,
-      "movieTitle": "The Lord Of the Rings: The Return of The King",
+      "title": "The Lord Of the Rings: The Return of The King",
       "imgUrl": "https://m.media-amazon.com/images/I/518MBFguRsL._AC_.jpg",
       "duration": "3h 30m",
       "genre": "Aventuras Fantasía épica"
     },
     {
       "id": 11,
-      "movieTitle": "Interstellar",
+      "title": "Interstellar",
       "imgUrl": "https://s3.amazonaws.com/nightjarprod/content/uploads/sites/130/2021/08/19085635/gEU2QniE6E77NI6lCU6MxlNBvIx-scaled.jpg",
       "duration": "2h 49m",
       "genre": "Ciencia ficción"
     },
     {
       "id": 12,
-      "movieTitle": "Dune",
+      "title": "Dune",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg",
       "duration": "2h 35m",
       "genre": "Ciencia ficción"
     },
     {
       "id": 13,
-      "movieTitle": "Everything Everywhere All At Once",
+      "title": "Everything Everywhere All At Once",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/en/1/1e/Everything_Everywhere_All_at_Once.jpg",
       "duration": "2h 19m",
       "genre": "Ciencia ficción"
     },
     {
       "id": 14,
-      "movieTitle": "Moonfall",
+      "title": "Moonfall",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/en/d/d3/Moonfall_film_poster.jpg",
       "duration": " 2h 10m",
       "genre": "Ciencia ficción"
     },
     {
       "id": 19,
-      "movieTitle": "Fight Club",
+      "title": "Fight Club",
       "imgUrl": "https://i.ebayimg.com/images/g/9pcAAOSw3Zxg5ss-/s-l500.jpg",
       "duration": "2h 19m",
       "genre": "Suspenso"
     },
     {
       "id": 20,
-      "movieTitle": "Dunkirk",
+      "title": "Dunkirk",
       "imgUrl": "https://movieposters2.com/images/1527970-b.jpg",
       "duration": "1h 46m",
       "genre": "Bélico"
     },
     {
       "id": 21,
-      "movieTitle": "Arrival",
+      "title": "Arrival",
       "imgUrl": "https://m.media-amazon.com/images/I/71l6fadsRMS._AC_SL1406_.jpg",
       "duration": "1h 56m",
       "genre": "Ciencia ficción"
     },
     {
       "id": 22,
-      "movieTitle": "Burnt",
+      "title": "Burnt",
       "imgUrl": "https://tendencybook.com/wp-content/uploads/2017/07/burnt-de-una-buena-receta-pelicula-completa-2015-1.jpg",
       "duration": "1h 41m",
       "genre": "Drama"
     },
     {
       "id": 23,
-      "movieTitle": "The Martian",
+      "title": "The Martian",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg",
       "duration": "2h 24m",
       "genre": "Ciencia ficción"
     },
     {
       "id": 24,
-      "movieTitle": "Whiplash",
+      "title": "Whiplash",
       "imgUrl": "https://1.bp.blogspot.com/-sRx1bb9ALpE/WpM986IFBVI/AAAAAAAAJF4/M6xRqV_ssM4YH3C_QYXatVrgO8MI9oAzwCLcBGAs/s1600/Whiplash%2Bposter.jpg",
       "duration": "1h 45m",
       "genre": "Drama"
     },
     {
       "id": 25,
-      "movieTitle": "The Matrix",
+      "title": "The Matrix",
       "imgUrl": "https://m.media-amazon.com/images/I/813dE2pH7XL._SY355_.jpg",
       "duration": "2h 16m",
       "genre": "Ciencia ficción"
     },
     {
       "id": 26,
-      "movieTitle": "The Social Network",
+      "title": "The Social Network",
       "imgUrl": "https://m.media-amazon.com/images/I/518zV7F39qL._AC_.jpg",
       "duration": "2 horas",
       "genre": "Drama"
     },
     {
       "id": 27,
-      "movieTitle": "Steve Jobs",
+      "title": "Steve Jobs",
       "imgUrl": "https://play-lh.googleusercontent.com/1GCQp0OJ-vOxKwwY_a9BDeCjImbYKg76kuLPGKErY3TVoETibpJ3hsHAqibSkdkcM5MB=w240-h480-rw",
       "duration": "2h 2m",
       "genre": "Drama "
     },
     {
       "id": 28,
-      "movieTitle": "The Imitation Game",
+      "title": "The Imitation Game",
       "imgUrl": "https://m.media-amazon.com/images/I/81b+G+RIkkL._SY445_.jpg",
       "duration": "1h 54m",
       "genre": "Drama"
     },
     {
       "id": 29,
-      "movieTitle": "The Hangover",
+      "title": "The Hangover",
       "imgUrl": "https://images.moviesanywhere.com/eebd935228b3a121b0b07c023ca5651e/92201c53-a2d7-40f9-a0c9-ae018f711cfc.webp?h=375&resize=fit&w=250",
       "duration": "1h 40m",
       "genre": "Comedia"
     },
     {
       "id": 30,
-      "movieTitle": "The Wolf of Wall Street",
+      "title": "The Wolf of Wall Street",
       "imgUrl": "https://m.media-amazon.com/images/I/91m2MB2lYFL._SY445_.jpg",
       "duration": "3 horas",
       "genre": "Drama"
     },
     {
       "id": 32,
-      "movieTitle": "Avengers: Endgame",
+      "title": "Avengers: Endgame",
       "imgUrl": "https://m.media-amazon.com/images/I/81+Nup8-8NL._SY445_.jpg",
       "duration": "3h 2m",
       "genre": "Acción"
     },
     {
       "id": 33,
-      "movieTitle": "Inception",
+      "title": "Inception",
       "imgUrl": "https://play-lh.googleusercontent.com/TGaTckK5V7VKlJ34PFlON5ei_DARWndAHrDqOWTaC6kH5R8V8RlxE6i22VswAx3ENx-3=w240-h480-rw",
       "duration": "2h 28m",
       "genre": "Acción"
     },
     {
       "id": 34,
-      "movieTitle": "Deadpool",
+      "title": "Deadpool",
       "imgUrl": "https://lumiere-a.akamaihd.net/v1/images/image_8c4aa72b.jpeg?region=0%2C0%2C800%2C1200",
       "duration": "1h 48m",
       "genre": "Acción"
     },
     {
       "id": 35,
-      "movieTitle": "Limitless",
+      "title": "Limitless",
       "imgUrl": "https://m.media-amazon.com/images/I/7170GPXbWKL._SY445_.jpg",
       "duration": "1h 45m",
       "genre": "Suspenso"

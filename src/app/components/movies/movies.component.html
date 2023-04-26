@@ -1,24 +1,75 @@
 <section class="movies">
     <div class="header">
-        <h2>{{ editMode ? 'Peliculas Modo Edición' : 'Peliculas' }}</h2>
+        <h2>Peliculas</h2>
         <mat-form-field color="accent">
             <mat-label>Buscar</mat-label>
             <input [(ngModel)]="searchText" matInput />
         </mat-form-field>
         <div>
-            <button mat-raised-button color="primary" (click)="addNewMovie()">New +</button>
-            <button mat-raised-button color="primary" (click)="toggleEditMode()">
-                {{ editMode ? 'Salir del modo edición' : 'Editar' }}
-            </button>
+            <button mat-raised-button color="primary" (click)="addNewMovie()">Nueva Película</button>
+            <button mat-raised-button color="accent" (click)="toggleView()">Cambiar Vista</button>
         </div>
     </div>
-    <div class="card-container">
-        <app-movie-card *ngFor="let movie of getFilteredMovies(); index as i" [movie]="movie"
-            [showButtons]="editMode ? true : false" [cardStyle]="editMode ? 'alternative' : ''"
-            (onDelete)="deleteMovie(i)"></app-movie-card>
-    </div>
+    <ng-container *ngIf="!isCardView">
+        <mat-table [dataSource]="getFilteredMovies()">
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+                <mat-cell *matCellDef="let movie">{{ movie.id }}</mat-cell>
+            </ng-container>
 
+            <ng-container matColumnDef="image">
+                <mat-header-cell *matHeaderCellDef>Imagen</mat-header-cell>
+                <mat-cell *matCellDef="let movie">
+                    <div class="movie-image" [style.background-image]="'url(' + movie.imgUrl + ')'"></div>
+                </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="title">
+                <mat-header-cell *matHeaderCellDef>Titulo</mat-header-cell>
+                <mat-cell *matCellDef="let movie">{{ movie.title }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="duration">
+                <mat-header-cell *matHeaderCellDef>Duración</mat-header-cell>
+                <mat-cell *matCellDef="let movie">{{ movie.duration }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="genre">
+                <mat-header-cell *matHeaderCellDef>Genero</mat-header-cell>
+                <mat-cell *matCellDef="let movie">{{ movie.genre }}</mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef>Acciones</mat-header-cell>
+                <mat-cell *matCellDef="let movie">
+                    <button mat-icon-button color="primary" (click)="editMovie(movie)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn" (click)="deleteMovie(movie)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row
+                *matHeaderRowDef="['id', 'image', 'title', 'duration', 'genre', 'actions']"></mat-header-row>
+            <mat-row
+                *matRowDef="let movie; columns: ['id', 'image', 'title', 'duration', 'genre', 'actions']; let i = index"></mat-row>
+        </mat-table>
+
+
+        <mat-paginator [length]="getPaginatorLength()" [pageSize]="pageSize" [pageSizeOptions]="[12, 24, 48]"
+            (page)="pageChanged($event)">
+        </mat-paginator>
+    </ng-container>
+
+    <ng-container *ngIf="isCardView">
+        <div class="card-container">
+            <app-movie-card *ngFor="let movie of getFilteredMovies(); index as i" [movie]="movie"
+                (delete)="deleteMovie($event)" (edit)="editMovie($event)"></app-movie-card>
+        </div>
+        <mat-paginator [length]="getPaginatorLength()" [pageSize]="pageSize" [pageSizeOptions]="[12, 24, 48]"
+            (page)="pageChanged($event)">
+        </mat-paginator>
+    </ng-container>
 </section>
-<mat-paginator [length]="getPaginatorLength()" [pageSize]="pageSize" [pageSizeOptions]="[12, 24, 48]"
-    (page)="pageChanged($event)">
-</mat-paginator>

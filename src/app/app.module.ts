@@ -19,11 +19,12 @@ import { FormsModule } from '@angular/forms';
 
 import { MoviesComponent } from './components/movies/movies.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AddMovieDialogComponent } from './components/add-movie-dialog/add-movie-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { MatTableModule } from '@angular/material/table';
+import { MovieDialogComponent } from './components/movie-dialog/movie-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HomeComponent,
     MovieCardComponent,
     MoviesComponent,
-    AddMovieDialogComponent,
-
+    MovieDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +48,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatSnackBarModule,
     MatDialogModule,
     MatIconModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatTableModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

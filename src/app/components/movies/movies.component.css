@@ -16,6 +16,12 @@ app-movie-card {
   max-width: 300px; /* Establecer un ancho máximo para las tarjetas */
 }
 
+mat-header-cell {
+  color: #fff;
+}
+mat-cell {
+  color: #fff;
+}
 .movies h2 {
   color: white;
   text-align: center;
@@ -48,4 +54,12 @@ mat-paginator {
 
 mat-label {
   background-color: transparent;
+}
+
+.movie-image {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
 }

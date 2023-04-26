@@ -1,0 +1,26 @@
+/*ESTILO DEL FORMULARIO*/
+.container-form mat-form-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 13px;
+}
+
+.container-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: #fff;
+  border: 2px solid brown;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 500px;
+}

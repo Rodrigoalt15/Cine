@@ -1,8 +1,9 @@
-import { Component, EventEmitter, Input, Output, OnChanges, SimpleChanges } from '@angular/core';
-
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MovieDialogComponent } from '../movie-dialog/movie-dialog.component';
 import { Movie } from '../../models/movie.model';
 import { HttpDataService } from '../../services/http-data.service';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-movie-card',
@@ -10,45 +11,49 @@ import { HttpDataService } from '../../services/http-data.service';
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent implements OnChanges {
-
-  editField: string = '';
-  @Input() movie: Movie = {
-    id: "",
-    movieTitle: "",
-    imgUrl: "",
-    duration: "",
-    genre: "",
-  };
-
-  isEditMode = false;
+  movies: Movie[] = [];
+  @Input() movie!: Movie;
   originalMovie: Movie;
-  @Input() showButtons: boolean = true;
-  @Input() cardStyle: string = 'default';
-  @Output() onDelete = new EventEmitter<void>();
+  showButtons = false;
+  @Output() onUpdate = new EventEmitter<void>();
+  @Output() edit = new EventEmitter<Movie>();
+  @Output() delete = new EventEmitter<Movie>();
 
-  constructor(private httpDataService: HttpDataService) {
+  constructor(private httpDataService: HttpDataService, private snackBar: MatSnackBar, public dialog: MatDialog) {
     this.originalMovie = {
       id: '',
-      movieTitle: '',
+      title: '',
       imgUrl: '',
       duration: '',
       genre: ''
     };
   }
+
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['movie']) {
       this.originalMovie = { ...this.movie };
     }
   }
 
-  enableEditMode(field: string) {
+  isEditMode = false;
+  @Output() onDelete = new EventEmitter<void>();
+
+  showForm() {
     this.isEditMode = true;
-    this.editField = field;
   }
 
-  disableEditMode(): void {
-    this.isEditMode = false;
-    this.movie = { ...this.originalMovie };
+
+  deleteForm() {
+    if (confirm('¿Está seguro de que desea eliminar esta película?')) {
+      this.httpDataService.deleteItem(this.movie.id).subscribe(
+        () => {
+          this.onDelete.emit();
+        },
+        (err) => {
+          console.error('Error deleting the movie', err);
+        }
+      );
+    }
   }
 
   onSubmit(): void {
@@ -64,20 +69,6 @@ export class MovieCardComponent implements OnChanges {
         (error) => {
           // Manejar el error según sea necesario
           console.error('Error updating movie:', error);
-        }
-      );
-    }
-  }
-
-  deleteMovie() {
-    if (confirm('¿Está seguro de que desea eliminar esta película?')) {
-      console.log('Deleting movie with ID:', this.movie.id);
-      this.httpDataService.deleteItem(this.movie.id).subscribe(
-        () => {
-          this.onDelete.emit();
-        },
-        (error) => {
-          console.error('Error deleting movie:', error);
         }
       );
     }
